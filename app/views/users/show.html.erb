@@ -10,7 +10,7 @@
         <th>Image</th>
       </tr>
 
-      <% current_user.photos.each do |photo| %>
+      <% @user.photos.each do |userphoto| %>
       <tr>
         <td><%= photo.caption %></td>
         <td><%= photo.image %></td>
