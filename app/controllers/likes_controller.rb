@@ -66,7 +66,7 @@ class LikesController < ApplicationController
   end
   
   def mylikes
-    @mylikes = current_user.likes
+    @mylikes = current_user.liked_photos
 
     render("my_likes.html.erb")
   end
