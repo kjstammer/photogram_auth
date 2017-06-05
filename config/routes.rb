@@ -35,6 +35,9 @@ root "photos#index"
 
   # DELETE
   get "/delete_like/:id", :controller => "likes", :action => "destroy"
+  
+  # MY LIKES
+  get "/my_likes", :controller => "likes", :action => "mylikes"
   #------------------------------
 
   # Routes for the Photo resource:
@@ -75,4 +78,5 @@ root "photos#index"
   get "/delete_users/:id", :controller => "users", :action => "destroy"
   #------------------------------
   
+
 end

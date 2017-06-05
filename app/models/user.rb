@@ -7,7 +7,7 @@ class User < ApplicationRecord
 # - username: must be present, unique
 validates :username, :presence => true, :uniqueness => true
          
-         has_many(:photos, :class_name => "Photo", :foreign_key => "photo_id")
+         has_many(:photos, :class_name => "Photo", :foreign_key => "user_id")
          has_many(:comments, :class_name => "Comment", :foreign_key => "comment_id")
          has_many(:likes, :class_name => "Like", :foreign_key => "like_id")
          has_many :liked_photos, :through => :likes, :source => :photo
