@@ -1,7 +1,9 @@
 class PhotosController < ApplicationController
   def index
     @photos = Photo.all
-
+    @like = Like.new
+    @comment = Comment.new
+    
     render("photos/index.html.erb")
   end
 
